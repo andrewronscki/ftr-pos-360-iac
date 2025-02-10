@@ -38,9 +38,6 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ vars.AWS_REGION }}
 
-      - name: Set AWS_PROFILE
-        run: echo "AWS_PROFILE=default" >> $GITHUB_ENV
-
       - name: Run Pulumi
         id: run-polumi
         uses: pulumi/actions@v6
