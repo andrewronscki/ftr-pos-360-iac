@@ -8,6 +8,13 @@ const bucket = new aws.s3.BucketV2("primeiro-bucket", {
   },
 });
 
+const bucket2 = new aws.s3.BucketV2("segundo-bucket", {
+  bucket: "segundo-test-rocket-seat-andre-wronscki",
+  tags: {
+    IAC: "true",
+  },
+});
+
 const ecr = new aws.ecr.Repository("primeiro-ecr", {
   name: "segundo-teste-pos-rocketseat",
   imageTagMutability: "IMMUTABLE",
@@ -18,6 +25,7 @@ const ecr = new aws.ecr.Repository("primeiro-ecr", {
 
 // Export the name of the bucket
 export const bucketName = bucket.id;
+export const bucketName2 = bucket2.id;
 
 export const ecrName = ecr.name;
 export const ecrRepositoryUrl = ecr.repositoryUrl;
