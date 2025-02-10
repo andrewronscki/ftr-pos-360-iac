@@ -43,7 +43,7 @@ jobs:
         uses: pulumi/actions@v6
         with:
           command: preview
-          stack-name: andrewronscki/dev
+          stack-name: rocketseat.iac/stg
           cloud-url: s3://pos-tech-360-pulumi-state-andre-wronscki
         env:
           PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
